@@ -28,60 +28,103 @@
                             clifford: '#da373d',
                             'food-primary': '#179800',
                             'title-color': '#111111',
-                            'food-linear': 'background: linear-gradient(180deg, #FFF 0%, #EFEBE3 100%);',
+                            'gray-color': '#EFEBE3',
                         },
                     },
                 },
-            }
+            };
+
+            module.exports = {
+                theme: {
+                    extend: {
+                        backgroundImage: {
+                            'custom-gradient': 'linear-gradient(180deg, #FFF 0%, #EFEBE3 100%;)',
+                        },
+                    },
+                },
+                variants: {},
+                plugins: [],
+            };
         </script>
     </head>
     <body class="sora-font">
-        <header class="container mx-auto bg-food-linear">
-            <!-- Navbar -->
-            <nav>
-                <div class="flex items-center justify-between py-6 px-4 lg:px-0">
-                    <div class="">
-                        <a href="index.html">
-                            <img src="images/logo-header.png" alt="image" class="logo">
-                        </a>
-                    </div>
-                    <div class="">
-                        <ul class="flex items-center gap-8 text-xl hidden lg:flex">
-                            <li class="transition duration-500 hover:text-green-600"><a href="#">Products</a></li>
-                            <li class="transition duration-500 hover:text-green-600"><a href="#">Sevices</a></li>
-                            <li class="transition duration-500 hover:text-green-600"><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="">
-                        <div class="flex items-center gap-5">
-                            <img class="cursor-pointer hidden lg:block" src="images/search.png" alt="image">
-                            <img class="cursor-pointer hidden lg:block" src="images/cart.png" alt="image">
-                            <a href="#" class="bg-transparent border border-green-600 text-black text-xl px-9 py-3 rounded-lg hidden lg:block transition duration-500 hover:bg-green-600 hover:text-red-600">Login</a>
-                            <a href="#" class="bg-food-primary text-white text-xl px-9 py-3 rounded-lg hidden lg:block transition duration-500 hover:bg-green-600 hover:text-red-600">Register</a>
-
-                            <div class="bars lg:hidden cursor-pointer">
-                                <img src="images/bars.png" alt="image">
+        <div class="bg-[linear-gradient(to_bottom,#ffffff,#EFEBE3)] h-full w-full">
+            <header class="container mx-auto">
+                <!-- Navbar -->
+                <nav>
+                    <div class="flex items-center justify-between py-6 px-4 lg:px-0">
+                        <div class="">
+                            <a href="index.html">
+                                <img src="images/logo-header.png" alt="image" class="logo">
+                            </a>
+                        </div>
+                        <div class="">
+                            <ul class="flex items-center gap-8 text-xl hidden lg:flex">
+                                <li class="transition duration-500 hover:text-green-600"><a href="#">Products</a></li>
+                                <li class="transition duration-500 hover:text-green-600"><a href="#">Sevices</a></li>
+                                <li class="transition duration-500 hover:text-green-600"><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <div class="flex items-center gap-5">
+                                <img class="cursor-pointer hidden lg:block" src="images/search.png" alt="image">
+                                <img class="cursor-pointer hidden lg:block" src="images/cart.png" alt="image">
+                                <a href="#" class="bg-transparent border border-green-600 text-black text-xl px-9 py-3 rounded-lg hidden lg:block transition duration-500 hover:bg-green-600 hover:text-red-600">Login</a>
+                                <a href="#" class="bg-food-primary text-white text-xl px-9 py-3 rounded-lg hidden lg:block transition duration-500 hover:bg-green-600 hover:text-red-600">Register</a>
+    
+                                <div class="bars lg:hidden cursor-pointer">
+                                    <img src="images/bars.png" alt="image">
+                                </div>
                             </div>
                         </div>
                     </div>
+                </nav>
+                <!-- End -->
+    
+                <!-- Hero Section -->
+                <div class="">
+                    <div class="max-w-4xl mx-auto text-center pt-20 pb-10">
+                        <h1 class="text-6xl font-semibold text-title-color mb-6">Freshness <span class="text-green-600">You Can Count</span> On, Prices You’ll Love!</h1>
+                        <p class="text-xl text-title-color">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
+                    </div>
+    
+                    <!-- image -->
+                    <div class="max-w-4xl text-center mx-auto">
+                        <img src="images/hero-vegetables.png" alt="hero image">
+                    </div>
                 </div>
-            </nav>
-            <!-- End -->
+                <!-- Hero Section End -->
+            </header>
+        </div>
 
-            <!-- Hero Section -->
-            <div class="">
-                <div class="max-w-4xl mx-auto text-center pt-20 pb-10">
-                    <h1 class="text-6xl font-semibold text-title-color mb-6">Freshness <span class="text-green-600">You Can Count</span> On, Prices You’ll Love!</h1>
-                    <p class="text-xl text-title-color">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
+        <!-- Start Services Area -->
+        <div class="services-area pt-32 pb-32 container mx-auto">
+            <h2 class="text-4xl font-semibold text-green-600 mb-10">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                <div class="services-card bg-gray-color text-center py-12 px-16 rounded-xl transition duration-500 hover:bg-pink-50 hover:text-white">
+                    <div class="services-image flex justify-center mb-6">
+                        <img src="images/service.png" alt="image">
+                    </div>
+                    <h3 class="text-title-color text-2xl font-semibold mb-3">24/7 Services</h3>
+                    <p class="text-xl text-gray-500">24/7 services operate continuously, providing round-the-clock support, assistance, and access to users globally.</p>
                 </div>
-
-                <!-- image -->
-                <div class="max-w-4xl text-center mx-auto">
-                    <img src="images/hero-vegetables.png" alt="hero image">
+                <div class="services-card bg-gray-color text-center py-12 px-16 rounded-xl transition duration-500 hover:bg-pink-50 hover:text-white">
+                    <div class="services-image flex justify-center mb-6">
+                        <img src="images/delivery.png" alt="image">
+                    </div>
+                    <h3 class="text-title-color text-2xl font-semibold mb-3">Fast Delivery</h3>
+                    <p class="text-xl text-gray-500">Fast delivery of healthy products ensures fresh, nutritious options reach customers quickly and conveniently.</p>
+                </div>
+                <div class="services-card bg-gray-color text-center py-12 px-16 rounded-xl transition duration-500 hover:bg-pink-50 hover:text-white">
+                    <div class="services-image flex justify-center mb-6">
+                        <img src="images/healthy.png" alt="image">
+                    </div>
+                    <h3 class="text-title-color text-2xl font-semibold mb-3">Healthy Products</h3>
+                    <p class="text-xl text-gray-500">Healthy products promote wellness, offering natural, nutritious, and sustainable options for better lifestyles.</p>
                 </div>
             </div>
-            <!-- Hero Section End -->
-        </header>
+        </div>
+        <!-- End Services Area -->
         
     </body>
 </html>
